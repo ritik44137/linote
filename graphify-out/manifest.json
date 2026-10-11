@@ -1,0 +1,230 @@
+{
+  "app/build.gradle.kts": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468632,
+    "ast_hash": "3e8c8db69dc573ce0243d9e1d14df4d3",
+    "semantic_hash": "3e8c8db69dc573ce0243d9e1d14df4d3"
+  },
+  "app/schemas/com.linote.data.LinoteDatabase/1.json": {
+    "mtime": 1791625135.342641,
+    "seen": 1791648098.1902502,
+    "ast_hash": "d98bb372806e53390471aedc7e8c8d58",
+    "semantic_hash": "d98bb372806e53390471aedc7e8c8d58"
+  },
+  "app/src/main/java/com/linote/Composer.kt": {
+    "mtime": 1791732289.0064592,
+    "seen": 1791732558.9709783,
+    "ast_hash": "e1a518eb09e54ba2a214a4fb51bb5403",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/DocumentBody.kt": {
+    "mtime": 1791732261.955665,
+    "seen": 1791732558.9709802,
+    "ast_hash": "7249e622fb638ae9dd90753f7e1597d1",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/Icons.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468808,
+    "ast_hash": "b898a8ebdcc13de084c7c30c39879444",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/MainActivity.kt": {
+    "mtime": 1791732298.031234,
+    "seen": 1791732558.970982,
+    "ast_hash": "3da15b8cfb6d7715d334e1d3f2c25f7c",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/MediaPreview.kt": {
+    "mtime": 1791732587.6240835,
+    "seen": 1791732609.7610834,
+    "ast_hash": "520bbb6b2b54e670b0c9263716c6ebdb",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/NoteList.kt": {
+    "mtime": 1791732281.8689983,
+    "seen": 1791732558.9709845,
+    "ast_hash": "e507b59a9718783c9d4bfd9a729d4f39",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/NotesViewModel.kt": {
+    "mtime": 1791732543.2157402,
+    "seen": 1791732558.9709852,
+    "ast_hash": "647e7e8f26c4ad4f27f8d1e573518833",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/data/DraftStore.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468884,
+    "ast_hash": "1784fbffb97dde5df56da5fffce46620",
+    "semantic_hash": "1784fbffb97dde5df56da5fffce46620"
+  },
+  "app/src/main/java/com/linote/data/LinoteDatabase.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468896,
+    "ast_hash": "5ee699225ba700e9912cbb9608b1abee",
+    "semantic_hash": "5ee699225ba700e9912cbb9608b1abee"
+  },
+  "app/src/main/java/com/linote/data/Note.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468908,
+    "ast_hash": "e11b8ee371aa6f40f404d73b205e37e2",
+    "semantic_hash": "e11b8ee371aa6f40f404d73b205e37e2"
+  },
+  "app/src/main/java/com/linote/data/NoteDao.kt": {
+    "mtime": 1791729406.124765,
+    "seen": 1791729861.522462,
+    "ast_hash": "c633cb41d56e07c421a762c92cbb6cd0",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/data/UuidV7.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468925,
+    "ast_hash": "eb40feae05b60ebc3ceff99ab301d262",
+    "semantic_hash": "eb40feae05b60ebc3ceff99ab301d262"
+  },
+  "app/src/main/java/com/linote/editor/DocumentJson.kt": {
+    "mtime": 1791732244.7301714,
+    "seen": 1791732558.970992,
+    "ast_hash": "73c6b667f6cbf239937db54fb22071c6",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/editor/DocumentLayout.kt": {
+    "mtime": 1791732231.0811017,
+    "seen": 1791732558.970993,
+    "ast_hash": "3c57c13a255fff1d3ba33c4bebe420bb",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/editor/Editor.kt": {
+    "mtime": 1791732242.880385,
+    "seen": 1791732558.9709942,
+    "ast_hash": "c1682ded7b004360d4e9a47ec5008899",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/editor/NoteTime.kt": {
+    "mtime": 1791651207.6766958,
+    "seen": 1791651501.3950346,
+    "ast_hash": "96efd96762d869619963aaf81470f389",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/linote/editor/Save.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4468997,
+    "ast_hash": "bddc1426693ad2f75fa0d7dfacdcfdc7",
+    "semantic_hash": "bddc1426693ad2f75fa0d7dfacdcfdc7"
+  },
+  "app/src/test/java/com/linote/data/DraftStoreTest.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.446901,
+    "ast_hash": "b7841df6343f627a3d6eae9debc41a52",
+    "semantic_hash": "b7841df6343f627a3d6eae9debc41a52"
+  },
+  "app/src/test/java/com/linote/data/NoteTest.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4469018,
+    "ast_hash": "e5488ff13f2734d293b364d032427d3a",
+    "semantic_hash": "e5488ff13f2734d293b364d032427d3a"
+  },
+  "app/src/test/java/com/linote/editor/DocumentJsonTest.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4469025,
+    "ast_hash": "1471e8da4004b83bb7f62f2ce3da67bf",
+    "semantic_hash": "1471e8da4004b83bb7f62f2ce3da67bf"
+  },
+  "app/src/test/java/com/linote/editor/DocumentLayoutTest.kt": {
+    "mtime": 1791732542.6416194,
+    "seen": 1791732558.9710023,
+    "ast_hash": "cfc7fec33cb9448276f96d2da6452731",
+    "semantic_hash": ""
+  },
+  "app/src/test/java/com/linote/editor/EditorTest.kt": {
+    "mtime": 1791732390.812233,
+    "seen": 1791732558.971003,
+    "ast_hash": "3fbbcd115ff79942abc499a1f4eaf261",
+    "semantic_hash": ""
+  },
+  "app/src/test/java/com/linote/editor/NoteTimeTest.kt": {
+    "mtime": 1791651207.6766958,
+    "seen": 1791651501.3950386,
+    "ast_hash": "363072d50eed1a8e58657b41d01b2704",
+    "semantic_hash": ""
+  },
+  "app/src/test/java/com/linote/editor/SaveTest.kt": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.446907,
+    "ast_hash": "755522a50fc2eb6582097837f92af347",
+    "semantic_hash": "755522a50fc2eb6582097837f92af347"
+  },
+  "build.gradle.kts": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.446908,
+    "ast_hash": "bf80fda510f7dd9a13886c63528feb6a",
+    "semantic_hash": "bf80fda510f7dd9a13886c63528feb6a"
+  },
+  "gradlew": {
+    "mtime": 1791566989.8900225,
+    "seen": 1791648098.1902635,
+    "ast_hash": "45bf2667b1fbec0e07e42808dc662b6b",
+    "semantic_hash": "45bf2667b1fbec0e07e42808dc662b6b"
+  },
+  "settings.gradle.kts": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4469101,
+    "ast_hash": "c8c7251e4be58db0afdfc183c6d791d4",
+    "semantic_hash": "c8c7251e4be58db0afdfc183c6d791d4"
+  },
+  ".superpowers/sdd/composer_notes_implementation_a4a81be5.plan/progress.md": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4469113,
+    "ast_hash": "324cba5fa71a68291fd7ab1ee625b712",
+    "semantic_hash": "324cba5fa71a68291fd7ab1ee625b712"
+  },
+  "docs/superpowers/specs/2026-10-10-composer-notes-design.md": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.446912,
+    "ast_hash": "b2c577659505b160cee8ea2ac29ccf44",
+    "semantic_hash": "b2c577659505b160cee8ea2ac29ccf44"
+  },
+  "stack.md": {
+    "mtime": 1791566563.9752688,
+    "seen": 1791648098.1902657,
+    "ast_hash": "318865a5d4dc9e0007bb3c7a7743d95d",
+    "semantic_hash": "318865a5d4dc9e0007bb3c7a7743d95d"
+  },
+  "theme.md": {
+    "mtime": 1791698823.5953014,
+    "seen": 1791712129.4469137,
+    "ast_hash": "774e9d06368d00eee4e4988505a04e7d",
+    "semantic_hash": "774e9d06368d00eee4e4988505a04e7d"
+  },
+  "app/src/debug/java/com/linote/DebugSeedLauncher.kt": {
+    "mtime": 1791729822.314673,
+    "seen": 1791729861.522433,
+    "ast_hash": "fa1e92239ff0217a4d483e9fc2b0a672",
+    "semantic_hash": ""
+  },
+  "app/src/debug/java/com/linote/debug/DebugNoteSeed.kt": {
+    "mtime": 1791729656.3501668,
+    "seen": 1791729861.5224354,
+    "ast_hash": "3a5fbedf40ace46213e47dcb60cd424e",
+    "semantic_hash": ""
+  },
+  "app/src/debug/java/com/linote/debug/DebugSeedActivity.kt": {
+    "mtime": 1791729612.5156183,
+    "seen": 1791729861.5224369,
+    "ast_hash": "7158456fa1bd51e04893d77de8de9d1a",
+    "semantic_hash": ""
+  },
+  "app/src/release/java/com/linote/DebugSeedLauncher.kt": {
+    "mtime": 1791729822.715244,
+    "seen": 1791729861.5224771,
+    "ast_hash": "db8232b78ed14bcd0296f9bcdca7b7be",
+    "semantic_hash": ""
+  },
+  "app/src/test/java/com/linote/debug/DebugNoteSeedTest.kt": {
+    "mtime": 1791729404.2741683,
+    "seen": 1791729861.5224807,
+    "ast_hash": "c093d77989db9d39a0a33b23d1d67e9c",
+    "semantic_hash": ""
+  }
+}

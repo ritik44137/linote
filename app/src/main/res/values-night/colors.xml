@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paper">#141311</color>
+    <color name="paper_2">#1D1B19</color>
+    <color name="paper_3">#262320</color>
+    <color name="ink">#F0E6D2</color>
+    <color name="ink_hot">#F0E6D2</color>
+    <color name="ink_dim">#B0A493</color>
+    <color name="ink_faint">#B0A493</color>
+    <color name="rule">#37332E</color>
+    <color name="accent">#D8C19A</color>
+</resources>

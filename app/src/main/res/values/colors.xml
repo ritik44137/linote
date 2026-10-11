@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- buttercup.sh light theme. Full list in theme.md -->
+    <color name="paper">#FDF3D5</color>
+    <color name="paper_2">#F8E9C1</color>
+    <color name="paper_3">#F2DDAA</color>
+    <color name="ink">#4A3610</color>
+    <color name="ink_hot">#1C1203</color>
+    <color name="ink_dim">#7D6528</color>
+    <color name="ink_faint">#9C8449</color>
+    <color name="rule">#D3BA82</color>
+    <color name="accent">#4A3610</color>
+</resources>

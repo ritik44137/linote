@@ -1,0 +1,445 @@
+{
+  "communities": {
+    "0": [
+      "app_src_main_java_com_linote_editor_editor_idleeditor",
+      "app_src_main_java_com_linote_editor_save",
+      "app_src_main_java_com_linote_editor_save_finishinsert",
+      "app_src_main_java_com_linote_editor_save_notefrom",
+      "app_src_main_java_com_linote_editor_save_samedocument",
+      "app_src_main_java_com_linote_notesviewmodel",
+      "app_src_main_java_com_linote_notesviewmodel_kt_context",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_blur",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_edit",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_factory",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_factory_object_factory_l78",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_factory_object_factory_l78_create",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_focus",
+      "app_src_main_java_com_linote_notesviewmodel_notesviewmodel_save",
+      "app_src_main_java_com_linote_notesviewmodel_screen",
+      "app_src_test_java_com_linote_editor_editortest",
+      "app_src_test_java_com_linote_editor_editortest_editortest",
+      "app_src_test_java_com_linote_editor_editortest_editortest_backspace_forwarddelete_andselection_removemediaandclosetext",
+      "app_src_test_java_com_linote_editor_editortest_editortest_composingovermedia_commitsfirst",
+      "app_src_test_java_com_linote_editor_editortest_editortest_enter_insertslinebreak_anddoesnotstamp",
+      "app_src_test_java_com_linote_editor_editortest_editortest_longpress_selectswordormedia",
+      "app_src_test_java_com_linote_editor_editortest_editortest_paste_staysplaintext",
+      "app_src_test_java_com_linote_editor_editortest_editortest_spacesshowarrow_anddonotsave",
+      "app_src_test_java_com_linote_editor_editortest_editortest_tab_startstimestamp_carriagereturndoesnot",
+      "app_src_test_java_com_linote_editor_editortest_editortest_timestamp_startsonletterandmedia_andclearswhengone",
+      "app_src_test_java_com_linote_editor_savetest",
+      "app_src_test_java_com_linote_editor_savetest_savetest",
+      "app_src_test_java_com_linote_editor_savetest_savetest_caretmove_isthesamedocument_textchangeisnot",
+      "app_src_test_java_com_linote_editor_savetest_savetest_mediaonly_buildsanote",
+      "app_src_test_java_com_linote_editor_savetest_savetest_throwinginsert_leavestheeditor",
+      "stateflow",
+      "t",
+      "viewmodelprovider"
+    ],
+    "1": [
+      "app_src_main_java_com_linote_composer_dragselection",
+      "app_src_main_java_com_linote_documentbody",
+      "app_src_main_java_com_linote_documentbody_documentbody",
+      "app_src_main_java_com_linote_documentbody_kt_color",
+      "app_src_main_java_com_linote_documentbody_kt_modifier",
+      "app_src_main_java_com_linote_editor_documentlayout",
+      "app_src_main_java_com_linote_editor_documentlayout_caret",
+      "app_src_main_java_com_linote_editor_documentlayout_caretposition",
+      "app_src_main_java_com_linote_editor_documentlayout_carets",
+      "app_src_main_java_com_linote_editor_documentlayout_composerextralines",
+      "app_src_main_java_com_linote_editor_documentlayout_doclayout",
+      "app_src_main_java_com_linote_editor_documentlayout_hit",
+      "app_src_main_java_com_linote_editor_documentlayout_inclusiveend",
+      "app_src_main_java_com_linote_editor_documentlayout_layout",
+      "app_src_main_java_com_linote_editor_documentlayout_lineof",
+      "app_src_main_java_com_linote_editor_documentlayout_mediaat",
+      "app_src_main_java_com_linote_editor_documentlayout_metrics",
+      "app_src_main_java_com_linote_editor_documentlayout_movevertical",
+      "app_src_main_java_com_linote_editor_documentlayout_placedblock",
+      "app_src_main_java_com_linote_editor_documentlayout_take",
+      "app_src_main_java_com_linote_editor_documentlayout_takeline",
+      "app_src_main_java_com_linote_editor_documentlayout_visualline",
+      "app_src_main_java_com_linote_editor_editor_showshint",
+      "app_src_test_java_com_linote_editor_documentlayouttest",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest_cardwidth_isfullonlyforonemediaandnocharacters",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest_composergrowsbylines_thencaps",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest_hitinthelowerhalf_staysonthatline",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest_hitonablock_isjustafterit_anddownkeepsx",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest_narrowsidecolumn_startstextunderthename",
+      "app_src_test_java_com_linote_editor_documentlayouttest_documentlayouttest_textsitsbesideablock_thenunderthename_andasecondblockstartsthere",
+      "textmeasurer"
+    ],
+    "2": [
+      "android",
+      "app_src_main_java_com_linote_editor_editor_mediakind",
+      "app_src_main_java_com_linote_editor_editor_mediakind_file",
+      "app_src_main_java_com_linote_editor_editor_mediakind_image",
+      "app_src_main_java_com_linote_editor_editor_mediakind_video",
+      "app_src_main_java_com_linote_mediapreview",
+      "app_src_main_java_com_linote_mediapreview_decodeimage",
+      "app_src_main_java_com_linote_mediapreview_filefallback",
+      "app_src_main_java_com_linote_mediapreview_icon",
+      "app_src_main_java_com_linote_mediapreview_kt_androidx",
+      "app_src_main_java_com_linote_mediapreview_kt_context",
+      "app_src_main_java_com_linote_mediapreview_kt_dp",
+      "app_src_main_java_com_linote_mediapreview_kt_modifier",
+      "app_src_main_java_com_linote_mediapreview_loadedpreview",
+      "app_src_main_java_com_linote_mediapreview_loadpreview",
+      "app_src_main_java_com_linote_mediapreview_mediatile",
+      "app_src_main_java_com_linote_mediapreview_picture",
+      "app_src_main_java_com_linote_mediapreview_rememberpreview",
+      "app_src_main_java_com_linote_mediapreview_solomedia",
+      "app_src_main_java_com_linote_mediapreview_typeicon",
+      "apply",
+      "bitmap",
+      "bitmapfactory",
+      "bounds",
+      "injustdecodebounds",
+      "options",
+      "source",
+      "true"
+    ],
+    "3": [
+      "app_src_main_java_com_linote_data_draftstore",
+      "app_src_main_java_com_linote_data_draftstore_draftstore",
+      "app_src_main_java_com_linote_data_draftstore_draftstore_load",
+      "app_src_main_java_com_linote_data_draftstore_draftstore_save",
+      "app_src_main_java_com_linote_editor_documentjson",
+      "app_src_main_java_com_linote_editor_documentjson_jsonstring",
+      "app_src_main_java_com_linote_editor_documentjson_parsepieces",
+      "app_src_main_java_com_linote_editor_documentjson_readcontent",
+      "app_src_main_java_com_linote_editor_documentjson_readdraft",
+      "app_src_main_java_com_linote_editor_documentjson_writedraft",
+      "app_src_main_java_com_linote_editor_documentjson_writepieces",
+      "app_src_main_java_com_linote_editor_documentlayout_cardmediawidth",
+      "app_src_main_java_com_linote_editor_editor_isidle",
+      "app_src_main_java_com_linote_editor_editor_media",
+      "app_src_main_java_com_linote_editor_editor_normalize",
+      "app_src_main_java_com_linote_editor_editor_piece",
+      "app_src_main_java_com_linote_editor_editor_regroup",
+      "app_src_main_java_com_linote_editor_editor_text",
+      "app_src_test_java_com_linote_data_draftstoretest",
+      "app_src_test_java_com_linote_data_draftstoretest_draftstoretest",
+      "app_src_test_java_com_linote_data_draftstoretest_draftstoretest_save_roundtrips_emptydeletes_garbageloadsidle",
+      "app_src_test_java_com_linote_editor_documentjsontest",
+      "app_src_test_java_com_linote_editor_documentjsontest_documentjsontest",
+      "app_src_test_java_com_linote_editor_documentjsontest_documentjsontest_draft_keepstimestamp_andrejectsgarbage",
+      "app_src_test_java_com_linote_editor_documentjsontest_documentjsontest_pieces_roundtrip",
+      "app_src_test_java_com_linote_editor_documentjsontest_documentjsontest_plainandinvalid_areonetextpiece_validarrayisadocument"
+    ],
+    "4": [
+      "app_src_main_java_com_linote_composer",
+      "app_src_main_java_com_linote_composer_composerinputstate",
+      "app_src_main_java_com_linote_editor_editor",
+      "app_src_main_java_com_linote_editor_editor_atom",
+      "app_src_main_java_com_linote_editor_editor_backspace",
+      "app_src_main_java_com_linote_editor_editor_ch",
+      "app_src_main_java_com_linote_editor_editor_committext",
+      "app_src_main_java_com_linote_editor_editor_deleteforward",
+      "app_src_main_java_com_linote_editor_editor_editor",
+      "app_src_main_java_com_linote_editor_editor_explode",
+      "app_src_main_java_com_linote_editor_editor_finishcomposing",
+      "app_src_main_java_com_linote_editor_editor_flat",
+      "app_src_main_java_com_linote_editor_editor_insertmedia",
+      "app_src_main_java_com_linote_editor_editor_med",
+      "app_src_main_java_com_linote_editor_editor_selectrange",
+      "app_src_main_java_com_linote_editor_editor_selectword",
+      "app_src_main_java_com_linote_editor_editor_setcaret",
+      "app_src_main_java_com_linote_editor_editor_setcomposing",
+      "app_src_main_java_com_linote_editor_editor_showsarrow",
+      "app_src_main_java_com_linote_editor_editor_splice",
+      "app_src_main_java_com_linote_editor_editor_stamps",
+      "app_src_main_java_com_linote_editor_editor_withtimestamp",
+      "view"
+    ],
+    "5": [
+      "app_src_main_java_com_linote_data_linotedatabase_linotedatabase_notedao",
+      "app_src_main_java_com_linote_data_note",
+      "app_src_main_java_com_linote_data_note_note",
+      "app_src_main_java_com_linote_data_note_note_create",
+      "app_src_main_java_com_linote_data_notedao",
+      "app_src_main_java_com_linote_data_notedao_notedao",
+      "app_src_main_java_com_linote_data_notedao_notedao_insert",
+      "app_src_main_java_com_linote_data_notedao_notedao_observe",
+      "app_src_main_java_com_linote_editor_notetime",
+      "app_src_main_java_com_linote_editor_notetime_formatnotetime",
+      "app_src_main_java_com_linote_notelist",
+      "app_src_main_java_com_linote_notelist_cardbody",
+      "app_src_main_java_com_linote_notelist_kt_androidx",
+      "app_src_main_java_com_linote_notelist_kt_dp",
+      "app_src_main_java_com_linote_notelist_kt_modifier",
+      "app_src_main_java_com_linote_notelist_notecard",
+      "app_src_main_java_com_linote_notelist_notelist",
+      "app_src_test_java_com_linote_editor_notetimetest",
+      "app_src_test_java_com_linote_editor_notetimetest_notetimetest",
+      "app_src_test_java_com_linote_editor_notetimetest_notetimetest_fixedzone_formatsenglishampm",
+      "flow",
+      "textstyle"
+    ],
+    "6": [
+      "app_src_main_java_com_linote_composer_documentinputconnection",
+      "app_src_main_java_com_linote_composer_documentinputconnection_apply",
+      "app_src_main_java_com_linote_composer_documentinputconnection_committext",
+      "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtext",
+      "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtextincodepoints",
+      "app_src_main_java_com_linote_composer_documentinputconnection_finishcomposingtext",
+      "app_src_main_java_com_linote_composer_documentinputconnection_getextractedtext",
+      "app_src_main_java_com_linote_composer_documentinputconnection_getselectedtext",
+      "app_src_main_java_com_linote_composer_documentinputconnection_gettextaftercursor",
+      "app_src_main_java_com_linote_composer_documentinputconnection_gettextbeforecursor",
+      "app_src_main_java_com_linote_composer_documentinputconnection_setcomposingtext",
+      "app_src_main_java_com_linote_composer_documentinputconnection_setselection",
+      "baseinputconnection",
+      "extractedtext",
+      "extractedtextrequest"
+    ],
+    "7": [
+      "app_src_main_java_com_linote_composer_composerinputelement",
+      "app_src_main_java_com_linote_composer_composerinputelement_create",
+      "app_src_main_java_com_linote_composer_composerinputelement_equals",
+      "app_src_main_java_com_linote_composer_composerinputelement_hashcode",
+      "app_src_main_java_com_linote_composer_composerinputelement_update",
+      "app_src_main_java_com_linote_composer_composerinputnode",
+      "app_src_main_java_com_linote_composer_composerinputnode_ensuresession",
+      "app_src_main_java_com_linote_composer_composerinputnode_onattach",
+      "app_src_main_java_com_linote_composer_composerinputnode_ondetach",
+      "job",
+      "modifiernodeelement",
+      "node",
+      "platformtextinputmodifiernode"
+    ],
+    "8": [
+      "app_src_main_java_com_linote_composer_composer",
+      "app_src_main_java_com_linote_composer_kt_modifier",
+      "app_src_main_java_com_linote_icons",
+      "app_src_main_java_com_linote_icons_arrowupicon",
+      "app_src_main_java_com_linote_icons_fileglyph",
+      "app_src_main_java_com_linote_icons_kt_color",
+      "app_src_main_java_com_linote_icons_kt_dp",
+      "app_src_main_java_com_linote_icons_kt_modifier",
+      "app_src_main_java_com_linote_icons_paperclipicon",
+      "app_src_main_java_com_linote_icons_penlineicon",
+      "app_src_main_java_com_linote_icons_strokeicon"
+    ],
+    "9": [
+      "app_src_main_java_com_linote_editor_documentjson_cursor",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_arr",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_escape",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_num",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_obj",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_parse",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_skip",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_str",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_take",
+      "app_src_main_java_com_linote_editor_documentjson_cursor_value"
+    ],
+    "10": [
+      "app_src_main_java_com_linote_data_linotedatabase",
+      "app_src_main_java_com_linote_data_linotedatabase_kt_context",
+      "app_src_main_java_com_linote_data_linotedatabase_linotedatabase",
+      "app_src_main_java_com_linote_data_linotedatabase_uuidconverters",
+      "app_src_main_java_com_linote_data_linotedatabase_uuidconverters_fromuuid",
+      "app_src_main_java_com_linote_data_linotedatabase_uuidconverters_touuid",
+      "roomdatabase"
+    ],
+    "11": [
+      "app_src_main_java_com_linote_mainactivity",
+      "app_src_main_java_com_linote_mainactivity_mainactivity",
+      "app_src_main_java_com_linote_mainactivity_mainactivity_oncreate",
+      "app_src_main_java_com_linote_mainactivity_notesscreen",
+      "bundle",
+      "componentactivity",
+      "viewmodel"
+    ],
+    "12": [
+      "app_src_test_java_com_linote_data_notetest",
+      "app_src_test_java_com_linote_data_notetest_notetest",
+      "app_src_test_java_com_linote_data_notetest_notetest_create_usesuuidv7andsametimestamps",
+      "app_src_test_java_com_linote_data_notetest_notetest_schema_primarykeyisuuid_andcreatedatisindexed",
+      "app_src_test_java_com_linote_data_notetest_notetest_uuidv7_differsatthesamemillisecond"
+    ],
+    "13": [
+      "docs_superpowers_specs_2026_10_10_composer_notes_design_document",
+      "docs_superpowers_specs_2026_10_10_composer_notes_design_draft_json",
+      "docs_superpowers_specs_2026_10_10_composer_notes_design_note_entity",
+      "superpowers_sdd_composer_notes_implementation_progress",
+      "theme_buttercup_light"
+    ],
+    "14": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_warn"
+    ],
+    "15": [
+      "app_src_main_java_com_linote_data_uuidv7",
+      "app_src_main_java_com_linote_data_uuidv7_uuidv7",
+      "app_src_main_java_com_linote_data_uuidv7_uuidv7_generate"
+    ],
+    "16": [
+      "stack_paging_3",
+      "stack_room"
+    ],
+    "17": [
+      "app_build_gradle"
+    ],
+    "18": [
+      "build_gradle"
+    ],
+    "19": [
+      "settings_gradle"
+    ],
+    "20": [
+      "stack_coil"
+    ],
+    "21": [
+      "stack_hilt"
+    ],
+    "22": [
+      "stack_jetpack_compose"
+    ],
+    "23": [
+      "stack_media3"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1051693404634581,
+    "1": 0.13911290322580644,
+    "2": 0.12169312169312169,
+    "3": 0.13538461538461538,
+    "4": 0.2924901185770751,
+    "5": 0.13852813852813853,
+    "6": 0.20952380952380953,
+    "7": 0.21794871794871795,
+    "8": 0.509090909090909,
+    "9": 0.4222222222222222,
+    "10": 0.38095238095238093,
+    "11": 0.47619047619047616,
+    "12": 0.4,
+    "13": 0.4,
+    "14": 0.8333333333333334,
+    "15": 0.6666666666666666,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_src_main_java_com_linote_editor_editor_editor",
+      "label": "Editor",
+      "degree": 32
+    },
+    {
+      "id": "app_src_main_java_com_linote_editor_editor_idleeditor",
+      "label": "idleEditor()",
+      "degree": 22
+    },
+    {
+      "id": "app_src_main_java_com_linote_editor_editor_piece",
+      "label": "Piece",
+      "degree": 21
+    },
+    {
+      "id": "app_src_main_java_com_linote_composer_composer",
+      "label": "Composer()",
+      "degree": 20
+    },
+    {
+      "id": "app_src_main_java_com_linote_editor_documentlayout_layout",
+      "label": "layout()",
+      "degree": 15
+    },
+    {
+      "id": "app_src_main_java_com_linote_composer_documentinputconnection",
+      "label": "DocumentInputConnection",
+      "degree": 14
+    },
+    {
+      "id": "app_src_main_java_com_linote_notesviewmodel_notesviewmodel",
+      "label": "NotesViewModel",
+      "degree": 12
+    },
+    {
+      "id": "app_src_main_java_com_linote_editor_documentlayout_doclayout",
+      "label": "DocLayout",
+      "degree": 12
+    },
+    {
+      "id": "app_src_main_java_com_linote_editor_documentjson_cursor",
+      "label": "Cursor",
+      "degree": 12
+    },
+    {
+      "id": "app_src_main_java_com_linote_documentbody_documentbody",
+      "label": "DocumentBody()",
+      "degree": 12
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Document Model",
+      "target": "Buttercup Light Theme",
+      "source_files": [
+        "docs/superpowers/specs/2026-10-10-composer-notes-design.md",
+        "theme.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "noteFrom()",
+      "target": "writePieces()",
+      "source_files": [
+        "app/src/main/java/com/linote/editor/Save.kt",
+        "app/src/main/java/com/linote/editor/DocumentJson.kt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "Composer()",
+      "target": "DocumentBody()",
+      "source_files": [
+        "app/src/main/java/com/linote/Composer.kt",
+        "app/src/main/java/com/linote/DocumentBody.kt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "CardBody()",
+      "target": "DocumentBody()",
+      "source_files": [
+        "app/src/main/java/com/linote/NoteList.kt",
+        "app/src/main/java/com/linote/DocumentBody.kt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "layout()",
+      "target": "normalize()",
+      "source_files": [
+        "app/src/main/java/com/linote/editor/DocumentLayout.kt",
+        "app/src/main/java/com/linote/editor/Editor.kt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
