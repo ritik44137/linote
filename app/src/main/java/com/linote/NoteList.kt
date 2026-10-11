@@ -129,26 +129,34 @@ fun NoteList(
     listState: LazyListState,
     armed: Boolean,
     armedHead: UUID?,
+    scrolledAway: Boolean,
+    onScrolledAway: () -> Unit,
     onFollowSettled: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val feed = remember(notes) { NoteFeed(notes) }
-    FollowNewest(listState, newestNoteId(notes), armed, armedHead, onFollowSettled)
+    FollowNewest(listState, notes, armed, armedHead, scrolledAway, onScrolledAway, onFollowSettled)
     NoteColumn(feed, bottomInset, listState, modifier)
 }
 
 @Composable
 private fun FollowNewest(
     listState: LazyListState,
-    head: UUID?,
+    notes: LazyPagingItems<Note>,
     armed: Boolean,
     armedHead: UUID?,
+    scrolledAway: Boolean,
+    onScrolledAway: () -> Unit,
     onFollowSettled: () -> Unit,
 ) {
     // Scroll position is read here so a drag does not recompose the cards.
-    val atEdge = atNewestEdge(listState.firstVisibleItemIndex, listState.firstVisibleItemScrollOffset)
-    val action = newestFollow(armed, armedHead, head, atEdge)
+    val index = listState.firstVisibleItemIndex
+    val offset = listState.firstVisibleItemScrollOffset
+    val scrollingAway = armed && listState.isScrollInProgress && !atNewestEdge(index, offset)
+    // A composer resize can leave the edge; only a finger scroll should cancel the jump.
+    val action = newestFollow(armed, armedHead, newestNoteId(notes), atNewestEdge = !scrolledAway)
     SideEffect {
+        if (scrollingAway) onScrolledAway()
         if (action == NewestFollow.Jump) listState.requestScrollToItem(0)
         if (action == NewestFollow.Jump || action == NewestFollow.Cancel) onFollowSettled()
     }

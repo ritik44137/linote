@@ -12,15 +12,15 @@
     "semantic_hash": "d98bb372806e53390471aedc7e8c8d58"
   },
   "app/src/main/java/com/linote/Composer.kt": {
-    "mtime": 1791712108.1272101,
-    "seen": 1791712129.446876,
-    "ast_hash": "1801b602ca50eb02526b609c4fbc5f87",
+    "mtime": 1791732289.0064592,
+    "seen": 1791732558.9709783,
+    "ast_hash": "e1a518eb09e54ba2a214a4fb51bb5403",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/DocumentBody.kt": {
-    "mtime": 1791712445.653332,
-    "seen": 1791712451.021274,
-    "ast_hash": "3d40e00ac701b3e69a9dedf77ad6689b",
+    "mtime": 1791732261.955665,
+    "seen": 1791732558.9709802,
+    "ast_hash": "7249e622fb638ae9dd90753f7e1597d1",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/Icons.kt": {
@@ -30,28 +30,28 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/MainActivity.kt": {
-    "mtime": 1791730722.8129218,
-    "seen": 1791730766.017568,
-    "ast_hash": "88ea648273f7dcf924e7636deda16cd6",
+    "mtime": 1791732298.031234,
+    "seen": 1791732558.970982,
+    "ast_hash": "3da15b8cfb6d7715d334e1d3f2c25f7c",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/MediaPreview.kt": {
-    "mtime": 1791651217.1938326,
-    "seen": 1791651501.3950272,
-    "ast_hash": "a1800c19c3a9f301662dc164c5a245c1",
+    "mtime": 1791732587.6240835,
+    "seen": 1791732609.7610834,
+    "ast_hash": "520bbb6b2b54e670b0c9263716c6ebdb",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/NoteList.kt": {
-    "mtime": 1791730735.479218,
-    "seen": 1791730766.0175717,
-    "ast_hash": "6648716c316e44b91321ba4e904c536a",
+    "mtime": 1791732281.8689983,
+    "seen": 1791732558.9709845,
+    "ast_hash": "e507b59a9718783c9d4bfd9a729d4f39",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/NotesViewModel.kt": {
-    "mtime": 1791698823.5953014,
-    "seen": 1791712129.4468873,
-    "ast_hash": "3c09b0053984babe15a6e6749fe6d085",
-    "semantic_hash": "3c09b0053984babe15a6e6749fe6d085"
+    "mtime": 1791732543.2157402,
+    "seen": 1791732558.9709852,
+    "ast_hash": "647e7e8f26c4ad4f27f8d1e573518833",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/linote/data/DraftStore.kt": {
     "mtime": 1791698823.5953014,
@@ -84,22 +84,22 @@
     "semantic_hash": "eb40feae05b60ebc3ceff99ab301d262"
   },
   "app/src/main/java/com/linote/editor/DocumentJson.kt": {
-    "mtime": 1791698823.6393013,
-    "seen": 1791712129.4468935,
-    "ast_hash": "c8e309513f613d2bdff6403a496c3a8b",
-    "semantic_hash": "c8e309513f613d2bdff6403a496c3a8b"
+    "mtime": 1791732244.7301714,
+    "seen": 1791732558.970992,
+    "ast_hash": "73c6b667f6cbf239937db54fb22071c6",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/linote/editor/DocumentLayout.kt": {
-    "mtime": 1791657664.0743332,
-    "seen": 1791657731.364085,
-    "ast_hash": "95df35638ae0ef1b503e2bf63c61c518",
+    "mtime": 1791732231.0811017,
+    "seen": 1791732558.970993,
+    "ast_hash": "3c57c13a255fff1d3ba33c4bebe420bb",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/editor/Editor.kt": {
-    "mtime": 1791698823.5953014,
-    "seen": 1791712129.4468968,
-    "ast_hash": "fd9542df879371c9c62e48081d8908ac",
-    "semantic_hash": "fd9542df879371c9c62e48081d8908ac"
+    "mtime": 1791732242.880385,
+    "seen": 1791732558.9709942,
+    "ast_hash": "c1682ded7b004360d4e9a47ec5008899",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/linote/editor/NoteTime.kt": {
     "mtime": 1791651207.6766958,
@@ -132,16 +132,16 @@
     "semantic_hash": "1471e8da4004b83bb7f62f2ce3da67bf"
   },
   "app/src/test/java/com/linote/editor/DocumentLayoutTest.kt": {
-    "mtime": 1791657665.266524,
-    "seen": 1791657731.364089,
-    "ast_hash": "729bf7ad6147e3e52ca1fdb106dd9011",
+    "mtime": 1791732542.6416194,
+    "seen": 1791732558.9710023,
+    "ast_hash": "cfc7fec33cb9448276f96d2da6452731",
     "semantic_hash": ""
   },
   "app/src/test/java/com/linote/editor/EditorTest.kt": {
-    "mtime": 1791698823.5953014,
-    "seen": 1791712129.4469047,
-    "ast_hash": "a38ad84625faf1cccbaac17f860aa0e1",
-    "semantic_hash": "a38ad84625faf1cccbaac17f860aa0e1"
+    "mtime": 1791732390.812233,
+    "seen": 1791732558.971003,
+    "ast_hash": "3fbbcd115ff79942abc499a1f4eaf261",
+    "semantic_hash": ""
   },
   "app/src/test/java/com/linote/editor/NoteTimeTest.kt": {
     "mtime": 1791651207.6766958,

@@ -63,6 +63,7 @@ private fun NotesScreen(model: NotesViewModel, onLongTitle: (() -> Unit)?) {
     val listState = rememberLazyListState()
     var followArmed by remember { mutableStateOf(false) }
     var followHead by remember { mutableStateOf<UUID?>(null) }
+    var scrolledAway by remember { mutableStateOf(false) }
     val density = LocalDensity.current
     // The animation target is the final keyboard height on the first inset frame.
     val imePx = max(
@@ -94,6 +95,8 @@ private fun NotesScreen(model: NotesViewModel, onLongTitle: (() -> Unit)?) {
                 listState = listState,
                 armed = followArmed,
                 armedHead = followHead,
+                scrolledAway = scrolledAway,
+                onScrolledAway = { scrolledAway = true },
                 onFollowSettled = { followArmed = false },
                 modifier = Modifier.fillMaxSize(),
             )
@@ -104,6 +107,7 @@ private fun NotesScreen(model: NotesViewModel, onLongTitle: (() -> Unit)?) {
                         listState.firstVisibleItemIndex,
                         listState.firstVisibleItemScrollOffset,
                     )
+                    scrolledAway = false
                     followArmed = atEdge
                     if (atEdge) followHead = newestNoteId(notes)
                     model.save()
