@@ -124,11 +124,17 @@ fun Composer(
     val lineHeightPx = measured.size.height.toFloat().coerceAtLeast(1f)
     var boxWidthPx by remember { mutableFloatStateOf(0f) }
     val side = 16.dp
+    val cardPad = 16.dp // note card inner padding
     val glyph = 20.dp
-    val chromeInsets = composerChrome(side, glyph, AttachButton)
+    val screenPad = 16.dp
+    val floatGap = 8.dp
+    val toolbar = 52.dp
+    val clipStart = floatGap + (toolbar - AttachButton) / 2 + (AttachButton - glyph) / 2 - screenPad
+    val chromeInsets = composerChrome(side, glyph, AttachButton, cardPad, clipStart)
+    val barStart = chromeInsets.barStart
     val textStart = chromeInsets.textStart
     val textEnd = chromeInsets.textEnd
-    val columnWidthPx = (boxWidthPx - with(density) { (textStart + textEnd).toPx() }).coerceAtLeast(charWidth)
+    val columnWidthPx = (boxWidthPx - with(density) { (barStart + textStart + textEnd).toPx() }).coerceAtLeast(charWidth)
     val blockPx = with(density) { 96.dp.toPx() }
     val nameGapPx = with(density) { 2.dp.toPx() }
     val sideGapPx = with(density) { 12.dp.toPx() }
@@ -149,7 +155,6 @@ fun Composer(
             Metrics(columnWidthPx, charWidth, lineHeightPx, blockPx, nameGapPx, nameHeight, sideGapPx, widthOf),
         )
     }
-    val toolbar = 52.dp
     val textPad = 18.dp
     val oldestPad = 4.dp
     val toolbarPx = with(density) { toolbar.toPx() }
@@ -158,7 +163,6 @@ fun Composer(
     val composerHeightPx = min(naturalPx, maxHeightPx)
     val composerHeight = with(density) { composerHeightPx.toDp() }
     val shape = RoundedCornerShape(topStart = 0.dp, topEnd = 0.dp, bottomStart = 20.dp, bottomEnd = 20.dp)
-    val floatGap = 8.dp
     val scroll = rememberScrollState()
     val focusRequester = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
@@ -206,168 +210,174 @@ fun Composer(
 
     Box(
         modifier
-            .padding(start = 16.dp, end = 16.dp, bottom = floatGap)
+            .padding(start = screenPad, end = 16.dp, bottom = floatGap)
             .onSizeChanged { boxWidthPx = it.width.toFloat() }
             .height(composerHeight + bottomInset)
-            .padding(bottom = bottomInset)
-            .clip(shape)
-            .background(bar),
+            .padding(bottom = bottomInset),
     ) {
-        val fieldModifier = Modifier
-            .fillMaxWidth()
-            .padding(start = textStart, end = textEnd)
-            .then(if (overflows) Modifier.verticalScroll(scroll) else Modifier)
-            .focusRequester(focusRequester)
-            .onPreviewKeyEvent { event ->
-                if (event.type != KeyEventType.KeyDown) return@onPreviewKeyEvent false
-                when (event.key) {
-                    Key.Enter, Key.NumPadEnter -> {
-                        onEdit { current, now -> current.commitText("\n", now) }
-                        true
-                    }
-                    Key.Backspace -> {
-                        onEdit { current, now -> current.backspace(now) }
-                        true
-                    }
-                    Key.Delete -> {
-                        onEdit { current, now -> current.deleteForward(now) }
-                        true
-                    }
-                    Key.DirectionLeft -> {
-                        val next = editor.caret - 1
-                        xGoal = caretPosition(laid, next, charWidth).first
-                        onEdit { current, _ -> current.setCaret(current.caret - 1) }
-                        true
-                    }
-                    Key.DirectionRight -> {
-                        val next = editor.caret + 1
-                        xGoal = caretPosition(laid, next, charWidth).first
-                        onEdit { current, _ -> current.setCaret(current.caret + 1) }
-                        true
-                    }
-                    Key.DirectionUp -> {
-                        onEdit { current, _ ->
-                            current.setCaret(moveVertical(laid, current.caret, -1, xGoal, charWidth))
+        Box(
+            Modifier
+                .padding(start = barStart)
+                .fillMaxSize()
+                .clip(shape)
+                .background(bar),
+        ) {
+            val fieldModifier = Modifier
+                .fillMaxWidth()
+                .padding(start = textStart, end = textEnd)
+                .then(if (overflows) Modifier.verticalScroll(scroll) else Modifier)
+                .focusRequester(focusRequester)
+                .onPreviewKeyEvent { event ->
+                    if (event.type != KeyEventType.KeyDown) return@onPreviewKeyEvent false
+                    when (event.key) {
+                        Key.Enter, Key.NumPadEnter -> {
+                            onEdit { current, now -> current.commitText("\n", now) }
+                            true
                         }
-                        true
-                    }
-                    Key.DirectionDown -> {
-                        onEdit { current, _ ->
-                            current.setCaret(moveVertical(laid, current.caret, 1, xGoal, charWidth))
+                        Key.Backspace -> {
+                            onEdit { current, now -> current.backspace(now) }
+                            true
                         }
-                        true
+                        Key.Delete -> {
+                            onEdit { current, now -> current.deleteForward(now) }
+                            true
+                        }
+                        Key.DirectionLeft -> {
+                            val next = editor.caret - 1
+                            xGoal = caretPosition(laid, next, charWidth).first
+                            onEdit { current, _ -> current.setCaret(current.caret - 1) }
+                            true
+                        }
+                        Key.DirectionRight -> {
+                            val next = editor.caret + 1
+                            xGoal = caretPosition(laid, next, charWidth).first
+                            onEdit { current, _ -> current.setCaret(current.caret + 1) }
+                            true
+                        }
+                        Key.DirectionUp -> {
+                            onEdit { current, _ ->
+                                current.setCaret(moveVertical(laid, current.caret, -1, xGoal, charWidth))
+                            }
+                            true
+                        }
+                        Key.DirectionDown -> {
+                            onEdit { current, _ ->
+                                current.setCaret(moveVertical(laid, current.caret, 1, xGoal, charWidth))
+                            }
+                            true
+                        }
+                        else -> false
                     }
-                    else -> false
                 }
-            }
-            .focusable()
-            .then(ComposerInputElement(inputState, focused))
-            .pointerInput(laid, charWidth, bodyTop, overflows) {
-                val slop = viewConfiguration.touchSlop
-                val longPress = viewConfiguration.longPressTimeoutMillis
-                awaitEachGesture {
-                    val down = awaitFirstDown(requireUnconsumed = false)
-                    val start = down.position
-                    val hitIndex = hit(laid, start.x, start.y - bodyTop, charWidth)
-                    var last = down
-                    val releasedInside = withTimeoutOrNull(longPress) {
-                        while (true) {
-                            val event = awaitPointerEvent(PointerEventPass.Main)
-                            val change = event.changes.first()
-                            last = change
-                            if (!change.pressed) return@withTimeoutOrNull true
-                            if ((change.position - start).getDistance() > slop) return@withTimeoutOrNull false
+                .focusable()
+                .then(ComposerInputElement(inputState, focused))
+                .pointerInput(laid, charWidth, bodyTop, overflows) {
+                    val slop = viewConfiguration.touchSlop
+                    val longPress = viewConfiguration.longPressTimeoutMillis
+                    awaitEachGesture {
+                        val down = awaitFirstDown(requireUnconsumed = false)
+                        val start = down.position
+                        val hitIndex = hit(laid, start.x, start.y - bodyTop, charWidth)
+                        var last = down
+                        val releasedInside = withTimeoutOrNull(longPress) {
+                            while (true) {
+                                val event = awaitPointerEvent(PointerEventPass.Main)
+                                val change = event.changes.first()
+                                last = change
+                                if (!change.pressed) return@withTimeoutOrNull true
+                                if ((change.position - start).getDistance() > slop) return@withTimeoutOrNull false
+                            }
+                            @Suppress("UNREACHABLE_CODE")
+                            false
                         }
-                        @Suppress("UNREACHABLE_CODE")
-                        false
-                    }
-                    when (releasedInside) {
-                        true -> editCaret(hitIndex)
-                        false -> {
-                            val delta = last.position - start
-                            val scrolling = overflows && last.pressed && abs(delta.y) > abs(delta.x)
-                            if (!last.pressed) {
-                                editCaret(hitIndex)
-                            } else if (!scrolling) {
+                        when (releasedInside) {
+                            true -> editCaret(hitIndex)
+                            false -> {
+                                val delta = last.position - start
+                                val scrolling = overflows && last.pressed && abs(delta.y) > abs(delta.x)
+                                if (!last.pressed) {
+                                    editCaret(hitIndex)
+                                } else if (!scrolling) {
+                                    focusNow()
+                                    onEdit { current, _ -> current.selectRange(hitIndex, hitIndex) }
+                                    dragSelection(laid, bodyTop, charWidth, onEdit)
+                                }
+                            }
+                            null -> {
                                 focusNow()
-                                onEdit { current, _ -> current.selectRange(hitIndex, hitIndex) }
+                                onEdit { current, _ -> current.selectWord(hitIndex) }
                                 dragSelection(laid, bodyTop, charWidth, onEdit)
                             }
                         }
-                        null -> {
-                            focusNow()
-                            onEdit { current, _ -> current.selectWord(hitIndex) }
-                            dragSelection(laid, bodyTop, charWidth, onEdit)
-                        }
                     }
                 }
+            val bottomPad = with(density) { bottomPadPx.toDp() }
+            val arrow = showsArrow(editor)
+            val canSave = editor.timestamp != null
+            val save = { if (canSave) onSave() }
+            if (overflows) {
+                Column(fieldModifier) {
+                    Spacer(Modifier.height(oldestPad))
+                    DocumentBody(
+                        editor, laid, charWidth, lineHeightPx, ink, inkDim,
+                        textMeasurer, bodyStyle, hintStyle, nameStyle, true,
+                    )
+                    Spacer(Modifier.height(bottomPad))
+                }
+            } else {
+                Column(
+                    fieldModifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Bottom,
+                ) {
+                    DocumentBody(
+                        editor, laid, charWidth, lineHeightPx, ink, inkDim,
+                        textMeasurer, bodyStyle, hintStyle, nameStyle, true,
+                    )
+                    Spacer(Modifier.height(bottomPad))
+                }
             }
-        val bottomPad = with(density) { bottomPadPx.toDp() }
-        val arrow = showsArrow(editor)
-        val canSave = editor.timestamp != null
-        val save = { if (canSave) onSave() }
-        if (overflows) {
-            Column(fieldModifier) {
-                Spacer(Modifier.height(oldestPad))
-                DocumentBody(
-                    editor, laid, charWidth, lineHeightPx, ink, inkDim,
-                    textMeasurer, bodyStyle, hintStyle, nameStyle, true,
-                )
-                Spacer(Modifier.height(bottomPad))
-            }
-        } else {
-            Column(
-                fieldModifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Bottom,
+            Box(
+                Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(end = chromeInsets.circleEnd, bottom = (toolbar - AttachButton) / 2)
+                    .size(AttachButton)
+                    .then(if (canSave) Modifier.background(chrome, CircleShape) else Modifier)
+                    .then(if (arrow) Modifier.semantics { contentDescription = "Save" } else Modifier)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = save,
+                    ),
+                contentAlignment = Alignment.Center,
             ) {
-                DocumentBody(
-                    editor, laid, charWidth, lineHeightPx, ink, inkDim,
-                    textMeasurer, bodyStyle, hintStyle, nameStyle, true,
-                )
-                Spacer(Modifier.height(bottomPad))
+                ArrowUpIcon(tint = if (canSave) bar else chrome, size = glyph)
             }
+            Box(
+                Modifier
+                    .align(Alignment.TopCenter)
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(Color(0xFF9E9E9E)),
+            )
         }
         Box(
             Modifier
                 .align(Alignment.BottomStart)
-                .padding(start = side, bottom = (toolbar - AttachButton) / 2),
+                .padding(start = clipStart, bottom = (toolbar - AttachButton) / 2),
         ) {
             ComposerHit(onClick = {}, alignment = Alignment.CenterStart) {
                 PaperclipIcon(tint = chrome, size = glyph)
             }
         }
-        Box(
-            Modifier
-                .align(Alignment.BottomEnd)
-                .padding(end = chromeInsets.circleEnd, bottom = (toolbar - AttachButton) / 2)
-                .size(AttachButton)
-                .then(if (canSave) Modifier.background(chrome, CircleShape) else Modifier)
-                .then(if (arrow) Modifier.semantics { contentDescription = "Save" } else Modifier)
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null,
-                    onClick = save,
-                ),
-            contentAlignment = Alignment.Center,
-        ) {
-            ArrowUpIcon(tint = if (canSave) bar else chrome, size = glyph)
-        }
-        Box(
-            Modifier
-                .align(Alignment.TopCenter)
-                .fillMaxWidth()
-                .height(1.dp)
-                .background(Color(0xFF9E9E9E)),
-        )
     }
 }
 
-internal data class ComposerChrome(val textStart: Dp, val textEnd: Dp, val circleEnd: Dp)
+internal data class ComposerChrome(val barStart: Dp, val textStart: Dp, val textEnd: Dp, val circleEnd: Dp)
 
-internal fun composerChrome(side: Dp, glyph: Dp, circle: Dp): ComposerChrome {
+internal fun composerChrome(side: Dp, glyph: Dp, circle: Dp, cardPad: Dp, clipStart: Dp): ComposerChrome {
     val circleEnd = side - (circle - glyph) / 2
-    val inset = circleEnd + circle + 3.dp
-    return ComposerChrome(inset, inset, circleEnd)
+    val caret = circleEnd + circle + 3.dp
+    return ComposerChrome(caret - (side - clipStart), cardPad, caret, circleEnd)
 }
 
 private val AttachButton = 40.dp

@@ -1,7 +1,7 @@
 # Graph Report - Linote  (2026-10-11)
 
 ## Corpus Check
-- 40 files · ~20,894 words
+- 40 files · ~20,949 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `898f29d7`
+- Built from commit: `f2361413`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

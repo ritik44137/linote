@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "composerinputelement",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L416"
+      "source_location": "L426"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputnode",
@@ -278,7 +278,7 @@
       "file_type": "code",
       "norm_label": "composerinputnode",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L449"
+      "source_location": "L459"
     },
     {
       "id": "app_src_test_java_com_linote_composerchrometest_composerchrometest",
@@ -330,7 +330,7 @@
       "file_type": "code",
       "norm_label": "composerchrome",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L365"
+      "source_location": "L375"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputstate",
@@ -343,7 +343,7 @@
       "file_type": "code",
       "norm_label": "composerinputstate",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L409"
+      "source_location": "L419"
     },
     {
       "id": "app_src_main_java_com_linote_data_draftstore_draftstore",
@@ -577,7 +577,7 @@
       "file_type": "code",
       "norm_label": "documentinputconnection",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L492"
+      "source_location": "L502"
     },
     {
       "id": "app_src_debug_java_com_linote_debug_debugnoteseed_debugnoteseed",
@@ -679,7 +679,7 @@
       "file_type": "code",
       "norm_label": "dragselection()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L393"
+      "source_location": "L403"
     },
     {
       "id": "app_src_main_java_com_linote_documentbody_blinkingcaret",
@@ -1627,7 +1627,7 @@
       "file_type": "code",
       "norm_label": ".create()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L420"
+      "source_location": "L430"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputelement_equals",
@@ -1639,7 +1639,7 @@
       "file_type": "code",
       "norm_label": ".equals()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L425"
+      "source_location": "L435"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputelement_hashcode",
@@ -1651,7 +1651,7 @@
       "file_type": "code",
       "norm_label": ".hashcode()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L427"
+      "source_location": "L437"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputelement_update",
@@ -1663,7 +1663,7 @@
       "file_type": "code",
       "norm_label": ".update()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L421"
+      "source_location": "L431"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputnode_ensuresession",
@@ -1675,7 +1675,7 @@
       "file_type": "code",
       "norm_label": ".ensuresession()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L463"
+      "source_location": "L473"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputnode_onattach",
@@ -1687,7 +1687,7 @@
       "file_type": "code",
       "norm_label": ".onattach()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L454"
+      "source_location": "L464"
     },
     {
       "id": "app_src_main_java_com_linote_composer_composerinputnode_ondetach",
@@ -1699,17 +1699,17 @@
       "file_type": "code",
       "norm_label": ".ondetach()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L458"
+      "source_location": "L468"
     },
     {
-      "id": "app_src_test_java_com_linote_composerchrometest_composerchrometest_textinsetmatchesonbothsides_andclearsthecircleby3dp",
-      "label": ".textInsetMatchesOnBothSides_andClearsTheCircleBy3dp()",
+      "id": "app_src_test_java_com_linote_composerchrometest_composerchrometest_barkeepstheclipgap_andtextusesthecardpad",
+      "label": ".barKeepsTheClipGap_andTextUsesTheCardPad()",
       "_callable": true,
       "_origin": "ast",
       "community": 29,
       "community_name": "ComposerChromeTest",
       "file_type": "code",
-      "norm_label": ".textinsetmatchesonbothsides_andclearsthecircleby3dp()",
+      "norm_label": ".barkeepstheclipgap_andtextusesthecardpad()",
       "source_file": "app/src/test/java/com/linote/ComposerChromeTest.kt",
       "source_location": "L8"
     },
@@ -1951,7 +1951,7 @@
       "file_type": "code",
       "norm_label": "activityof()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L440"
+      "source_location": "L450"
     },
     {
       "id": "app_src_main_java_com_linote_composer_showimenow",
@@ -1963,7 +1963,7 @@
       "file_type": "code",
       "norm_label": "showimenow()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L430"
+      "source_location": "L440"
     },
     {
       "id": "app_src_main_java_com_linote_data_draftstore_draftstore_load",
@@ -2407,7 +2407,7 @@
       "file_type": "code",
       "norm_label": "composerhit()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L375"
+      "source_location": "L385"
     },
     {
       "id": "app_src_main_java_com_linote_data_notedao_notedao_insert",
@@ -2563,7 +2563,7 @@
       "file_type": "code",
       "norm_label": ".apply()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L496"
+      "source_location": "L506"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_committext",
@@ -2575,7 +2575,7 @@
       "file_type": "code",
       "norm_label": ".committext()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L511"
+      "source_location": "L521"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtext",
@@ -2587,7 +2587,7 @@
       "file_type": "code",
       "norm_label": ".deletesurroundingtext()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L526"
+      "source_location": "L536"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtextincodepoints",
@@ -2599,7 +2599,7 @@
       "file_type": "code",
       "norm_label": ".deletesurroundingtextincodepoints()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L540"
+      "source_location": "L550"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_finishcomposingtext",
@@ -2611,7 +2611,7 @@
       "file_type": "code",
       "norm_label": ".finishcomposingtext()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L521"
+      "source_location": "L531"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_getextractedtext",
@@ -2623,7 +2623,7 @@
       "file_type": "code",
       "norm_label": ".getextractedtext()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L570"
+      "source_location": "L580"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_getselectedtext",
@@ -2635,7 +2635,7 @@
       "file_type": "code",
       "norm_label": ".getselectedtext()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L562"
+      "source_location": "L572"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_gettextaftercursor",
@@ -2647,7 +2647,7 @@
       "file_type": "code",
       "norm_label": ".gettextaftercursor()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L555"
+      "source_location": "L565"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_gettextbeforecursor",
@@ -2659,7 +2659,7 @@
       "file_type": "code",
       "norm_label": ".gettextbeforecursor()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L548"
+      "source_location": "L558"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_setcomposingtext",
@@ -2671,7 +2671,7 @@
       "file_type": "code",
       "norm_label": ".setcomposingtext()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L516"
+      "source_location": "L526"
     },
     {
       "id": "app_src_main_java_com_linote_composer_documentinputconnection_setselection",
@@ -2683,7 +2683,7 @@
       "file_type": "code",
       "norm_label": ".setselection()",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L543"
+      "source_location": "L553"
     },
     {
       "id": "app_src_debug_java_com_linote_debug_debugnoteseed_debugnoteseed_compose",
@@ -4635,7 +4635,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L147",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
@@ -4647,7 +4647,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L149",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -4659,7 +4659,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L165",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -4671,7 +4671,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L189",
+      "source_location": "L193",
       "weight": 1.0
     },
     {
@@ -4683,7 +4683,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L225",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -4695,7 +4695,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L250",
+      "source_location": "L259",
       "weight": 1.0
     },
     {
@@ -4707,7 +4707,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L264",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -4719,7 +4719,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L271",
+      "source_location": "L280",
       "weight": 1.0
     },
     {
@@ -4731,7 +4731,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L294",
+      "source_location": "L303",
       "weight": 1.0
     },
     {
@@ -4743,7 +4743,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L306",
+      "source_location": "L315",
       "weight": 1.0
     },
     {
@@ -4755,7 +4755,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L335",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -4767,7 +4767,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L370",
+      "source_location": "L380",
       "weight": 1.0
     },
     {
@@ -4779,7 +4779,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L420",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -4791,7 +4791,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L427",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -4803,7 +4803,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L423",
+      "source_location": "L433",
       "weight": 1.0
     },
     {
@@ -4815,7 +4815,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L479",
+      "source_location": "L489",
       "weight": 1.0
     },
     {
@@ -4827,7 +4827,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L485",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -4839,7 +4839,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L455",
+      "source_location": "L465",
       "weight": 1.0
     },
     {
@@ -4851,59 +4851,11 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L410",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
       "source": "app_src_main_java_com_linote_composer_documentinputconnection_committext",
-      "target": "app_src_main_java_com_linote_composer_documentinputconnection_apply",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L512",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_linote_composer_documentinputconnection_committext",
-      "target": "app_src_main_java_com_linote_composer_documentinputconnection_committext",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L512",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtext",
-      "target": "app_src_main_java_com_linote_composer_documentinputconnection_apply",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L527",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtextincodepoints",
-      "target": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtext",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L541",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_linote_composer_documentinputconnection_finishcomposingtext",
       "target": "app_src_main_java_com_linote_composer_documentinputconnection_apply",
       "relation": "calls",
       "_origin": "ast",
@@ -4915,6 +4867,54 @@
       "weight": 1.0
     },
     {
+      "source": "app_src_main_java_com_linote_composer_documentinputconnection_committext",
+      "target": "app_src_main_java_com_linote_composer_documentinputconnection_committext",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/linote/Composer.kt",
+      "source_location": "L522",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtext",
+      "target": "app_src_main_java_com_linote_composer_documentinputconnection_apply",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/linote/Composer.kt",
+      "source_location": "L537",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtextincodepoints",
+      "target": "app_src_main_java_com_linote_composer_documentinputconnection_deletesurroundingtext",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/linote/Composer.kt",
+      "source_location": "L551",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_linote_composer_documentinputconnection_finishcomposingtext",
+      "target": "app_src_main_java_com_linote_composer_documentinputconnection_apply",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/linote/Composer.kt",
+      "source_location": "L532",
+      "weight": 1.0
+    },
+    {
       "source": "app_src_main_java_com_linote_composer_documentinputconnection_getextractedtext",
       "target": "app_src_main_java_com_linote_composer_documentinputconnection_apply",
       "relation": "calls",
@@ -4923,7 +4923,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L572",
+      "source_location": "L582",
       "weight": 1.0
     },
     {
@@ -4935,7 +4935,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L572",
+      "source_location": "L582",
       "weight": 1.0
     },
     {
@@ -4947,7 +4947,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L517",
+      "source_location": "L527",
       "weight": 1.0
     },
     {
@@ -4959,7 +4959,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L544",
+      "source_location": "L554",
       "weight": 1.0
     },
     {
@@ -4971,7 +4971,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L404",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -4983,7 +4983,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L431",
+      "source_location": "L441",
       "weight": 1.0
     },
     {
@@ -6699,7 +6699,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L452",
+      "source_location": "L462",
       "weight": 1.0
     },
     {
@@ -6711,7 +6711,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L410",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
@@ -6723,7 +6723,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L412",
+      "source_location": "L422",
       "weight": 1.0
     },
     {
@@ -6795,7 +6795,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L416",
+      "source_location": "L426",
       "weight": 1.0
     },
     {
@@ -8814,7 +8814,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L440",
+      "source_location": "L450",
       "weight": 1.0
     },
     {
@@ -8862,7 +8862,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L367",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -8874,7 +8874,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L375",
+      "source_location": "L385",
       "weight": 1.0
     },
     {
@@ -8886,7 +8886,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L421",
+      "source_location": "L431",
       "weight": 1.0
     },
     {
@@ -8898,7 +8898,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L570",
+      "source_location": "L580",
       "weight": 1.0
     },
     {
@@ -8910,7 +8910,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L393",
+      "source_location": "L403",
       "weight": 1.0
     },
     {
@@ -8922,7 +8922,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L430",
+      "source_location": "L440",
       "weight": 1.0
     },
     {
@@ -9990,7 +9990,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L440",
+      "source_location": "L450",
       "weight": 1.0
     },
     {
@@ -10582,7 +10582,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L367",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -10593,7 +10593,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L375",
+      "source_location": "L385",
       "weight": 1.0
     },
     {
@@ -10604,7 +10604,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L393",
+      "source_location": "L403",
       "weight": 1.0
     },
     {
@@ -10615,7 +10615,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L409",
+      "source_location": "L419",
       "weight": 1.0
     },
     {
@@ -10626,7 +10626,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L416",
+      "source_location": "L426",
       "weight": 1.0
     },
     {
@@ -10637,7 +10637,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L430",
+      "source_location": "L440",
       "weight": 1.0
     },
     {
@@ -10648,7 +10648,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L440",
+      "source_location": "L450",
       "weight": 1.0
     },
     {
@@ -10659,7 +10659,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L449",
+      "source_location": "L459",
       "weight": 1.0
     },
     {
@@ -10670,7 +10670,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L492",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -11924,7 +11924,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L449",
+      "source_location": "L459",
       "weight": 1.0
     },
     {
@@ -12001,7 +12001,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L416",
+      "source_location": "L426",
       "weight": 1.0
     },
     {
@@ -12012,7 +12012,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L449",
+      "source_location": "L459",
       "weight": 1.0
     },
     {
@@ -12023,7 +12023,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L492",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -12221,7 +12221,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L420",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -12232,7 +12232,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L421",
+      "source_location": "L431",
       "weight": 1.0
     },
     {
@@ -12243,7 +12243,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L425",
+      "source_location": "L435",
       "weight": 1.0
     },
     {
@@ -12254,7 +12254,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L427",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -12265,7 +12265,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L454",
+      "source_location": "L464",
       "weight": 1.0
     },
     {
@@ -12276,7 +12276,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L458",
+      "source_location": "L468",
       "weight": 1.0
     },
     {
@@ -12287,7 +12287,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L463",
+      "source_location": "L473",
       "weight": 1.0
     },
     {
@@ -12298,7 +12298,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L496",
+      "source_location": "L506",
       "weight": 1.0
     },
     {
@@ -12309,7 +12309,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L511",
+      "source_location": "L521",
       "weight": 1.0
     },
     {
@@ -12320,7 +12320,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L516",
+      "source_location": "L526",
       "weight": 1.0
     },
     {
@@ -12331,7 +12331,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L521",
+      "source_location": "L531",
       "weight": 1.0
     },
     {
@@ -12342,7 +12342,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L526",
+      "source_location": "L536",
       "weight": 1.0
     },
     {
@@ -12353,7 +12353,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L540",
+      "source_location": "L550",
       "weight": 1.0
     },
     {
@@ -12364,7 +12364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L543",
+      "source_location": "L553",
       "weight": 1.0
     },
     {
@@ -12375,7 +12375,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L548",
+      "source_location": "L558",
       "weight": 1.0
     },
     {
@@ -12386,7 +12386,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L555",
+      "source_location": "L565",
       "weight": 1.0
     },
     {
@@ -12397,7 +12397,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L562",
+      "source_location": "L572",
       "weight": 1.0
     },
     {
@@ -12408,7 +12408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L570",
+      "source_location": "L580",
       "weight": 1.0
     },
     {
@@ -12721,7 +12721,7 @@
     },
     {
       "source": "app_src_test_java_com_linote_composerchrometest_composerchrometest",
-      "target": "app_src_test_java_com_linote_composerchrometest_composerchrometest_textinsetmatchesonbothsides_andclearsthecircleby3dp",
+      "target": "app_src_test_java_com_linote_composerchrometest_composerchrometest_barkeepstheclipgap_andtextusesthecardpad",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13313,19 +13313,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L312",
-      "weight": 1.0
-    },
-    {
-      "source": "app_src_main_java_com_linote_composer_composer",
-      "target": "app_src_main_java_com_linote_icons_paperclipicon",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/src/main/java/com/linote/Composer.kt",
-      "source_location": "L336",
+      "source_location": "L321",
       "weight": 1.0
     },
     {
@@ -13338,6 +13326,18 @@
       "context": "call",
       "source_file": "app/src/main/java/com/linote/Composer.kt",
       "source_location": "L353",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_linote_composer_composer",
+      "target": "app_src_main_java_com_linote_icons_paperclipicon",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "app/src/main/java/com/linote/Composer.kt",
+      "source_location": "L369",
       "weight": 1.0
     },
     {
@@ -14189,5 +14189,5 @@
       "source_file": ".superpowers/sdd/composer_notes_implementation_a4a81be5.plan/progress.md"
     }
   ],
-  "built_at_commit": "a055843771a5d4cfa5728dbca1fe5d6bc4f4104a"
+  "built_at_commit": "f2361413f206afad1760b626c2b10ad88567c9ca"
 }
