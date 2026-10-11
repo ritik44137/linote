@@ -20,7 +20,6 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -28,7 +27,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -60,11 +58,11 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.node.ModifierNodeElement
 import androidx.compose.ui.platform.PlatformTextInputModifierNode
@@ -77,7 +75,6 @@ import com.linote.editor.caretPosition
 import com.linote.editor.commitText
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import com.linote.editor.composerExtraLines
 import com.linote.editor.deleteForward
 import com.linote.editor.finishComposing
 import com.linote.editor.flat
@@ -89,7 +86,6 @@ import com.linote.editor.selectWord
 import com.linote.editor.setCaret
 import com.linote.editor.setComposing
 import com.linote.editor.showsArrow
-import com.linote.editor.showsHint
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
@@ -116,7 +112,6 @@ fun Composer(
     val accent = colorResource(R.color.accent)
     val dark = isSystemInDarkTheme()
     val bar = if (dark) Color(0xFF201F1B) else colorResource(R.color.paper_3)
-    val line = if (dark) Color(0xFF3D3C34) else colorResource(R.color.rule)
     val chrome = if (dark) Color(0xFFC4B798) else accent
     val hintColor = if (dark) Color(0xFFA9A295) else inkDim
     val bodyStyle = TextStyle(color = inkHot, fontFamily = FontFamily.Serif, fontSize = 16.sp)
@@ -130,10 +125,9 @@ fun Composer(
     var boxWidthPx by remember { mutableFloatStateOf(0f) }
     val side = 16.dp
     val glyph = 20.dp
-    val showHint = showsHint(editor)
-    // 21.44 is the paperclip path's rightmost point; +1 is half the 2-unit round stroke.
-    val textStart = side + glyph * ((21.44f + 1f) / 24f) + 3.dp
-    val textEnd = side
+    val chromeInsets = composerChrome(side, glyph, AttachButton)
+    val textStart = chromeInsets.textStart
+    val textEnd = chromeInsets.textEnd
     val columnWidthPx = (boxWidthPx - with(density) { (textStart + textEnd).toPx() }).coerceAtLeast(charWidth)
     val blockPx = with(density) { 96.dp.toPx() }
     val nameGapPx = with(density) { 2.dp.toPx() }
@@ -155,12 +149,14 @@ fun Composer(
             Metrics(columnWidthPx, charWidth, lineHeightPx, blockPx, nameGapPx, nameHeight, sideGapPx, widthOf),
         )
     }
-    val extra = composerExtraLines(laid.height, lineHeightPx)
     val toolbar = 52.dp
     val textPad = 18.dp
-    val textHeight = textPad * 2 + with(density) { ((extra + 1) * lineHeightPx).toDp() }
-    val composerHeight = textHeight + toolbar
-    val shape = RoundedCornerShape(20.dp)
+    val toolbarPx = with(density) { toolbar.toPx() }
+    val maxHeightPx = toolbarPx + with(density) { (textPad * 2).toPx() } + lineHeightPx * 5f
+    val naturalPx = toolbarPx + (laid.height - lineHeightPx).coerceAtLeast(0f)
+    val composerHeightPx = min(naturalPx, maxHeightPx)
+    val composerHeight = with(density) { composerHeightPx.toDp() }
+    val shape = RoundedCornerShape(topStart = 0.dp, topEnd = 0.dp, bottomStart = 20.dp, bottomEnd = 20.dp)
     val floatGap = 8.dp
     val scroll = rememberScrollState()
     val focusRequester = remember { FocusRequester() }
@@ -172,28 +168,26 @@ fun Composer(
     inputState.view = view
     inputState.focused = focused
     var xGoal by remember { mutableFloatStateOf(0f) }
-    val padPx = with(density) { textPad.toPx() }
-    val viewportPx = with(density) { composerHeight.toPx() - toolbar.toPx() }
-    val overflows = laid.height + padPx * 2f > viewportPx + 1f
-    val bodyTop = if (overflows) padPx else (viewportPx - laid.height - padPx).coerceAtLeast(0f)
+    val overflows = naturalPx > maxHeightPx + 1f
+    val bottomPadPx = ((toolbarPx - lineHeightPx) / 2f).coerceAtLeast(0f)
+    val bodyTop = if (overflows) 0f else (composerHeightPx - bottomPadPx - laid.height).coerceAtLeast(0f)
     LaunchedEffect(composerHeight, bottomInset) { onHeight(composerHeight + bottomInset + floatGap) }
     LaunchedEffect(focused) {
         if (focused) focusRequester.requestFocus() else focusManager.clearFocus()
     }
-    LaunchedEffect(editor.caret, editor.anchor, editor.composition, focused, laid) {
+    LaunchedEffect(editor.caret, editor.anchor, editor.composition, focused, laid, overflows) {
         if (!focused) return@LaunchedEffect
         val imm = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         val comp = editor.composition
         imm.updateSelection(view, editor.anchor, editor.caret, comp?.first ?: -1, comp?.second ?: -1)
-        val (_, caretY) = caretPosition(laid, editor.caret, charWidth)
-        val top = padPx + caretY
-        val bottom = top + lineHeightPx
-        val viewTop = scroll.value.toFloat()
-        val viewBottom = viewTop + viewportPx
-        when {
-            top < viewTop -> scroll.scrollTo(top.toInt().coerceAtLeast(0))
-            bottom > viewBottom -> scroll.scrollTo((bottom - viewportPx).toInt().coerceAtLeast(0))
+        if (!overflows) {
+            if (scroll.value != 0) scroll.scrollTo(0)
+            return@LaunchedEffect
         }
+        val (_, caretY) = caretPosition(laid, editor.caret, charWidth)
+        val desired = composerHeightPx - bottomPadPx - lineHeightPx
+        val maxScroll = (laid.height + bottomPadPx - composerHeightPx).coerceAtLeast(0f)
+        scroll.scrollTo((caretY - desired).coerceIn(0f, maxScroll).toInt())
     }
 
     fun focusNow() {
@@ -220,7 +214,6 @@ fun Composer(
         val fieldModifier = Modifier
             .fillMaxWidth()
             .padding(start = textStart, end = textEnd)
-            .padding(bottom = toolbar)
             .then(if (overflows) Modifier.verticalScroll(scroll) else Modifier)
             .focusRequester(focusRequester)
             .onPreviewKeyEvent { event ->
@@ -307,15 +300,17 @@ fun Composer(
                     }
                 }
             }
+        val bottomPad = with(density) { bottomPadPx.toDp() }
+        val arrow = showsArrow(editor)
+        val canSave = editor.timestamp != null
+        val save = { if (canSave) onSave() }
         if (overflows) {
             Column(fieldModifier) {
-                Spacer(Modifier.height(with(density) { padPx.toDp() }))
                 DocumentBody(
                     editor, laid, charWidth, lineHeightPx, ink, inkDim,
                     textMeasurer, bodyStyle, hintStyle, nameStyle, true,
-                    showHint = false,
                 )
-                Spacer(Modifier.height(with(density) { padPx.toDp() }))
+                Spacer(Modifier.height(bottomPad))
             }
         } else {
             Column(
@@ -325,60 +320,51 @@ fun Composer(
                 DocumentBody(
                     editor, laid, charWidth, lineHeightPx, ink, inkDim,
                     textMeasurer, bodyStyle, hintStyle, nameStyle, true,
-                    showHint = false,
                 )
-                Spacer(Modifier.height(with(density) { padPx.toDp() }))
-            }
-        }
-        val arrow = showsArrow(editor)
-        val save = { if (editor.timestamp != null) onSave() }
-        if (showHint) {
-            Box(
-                Modifier
-                    .align(Alignment.TopCenter)
-                    .fillMaxWidth()
-                    .height(with(density) { viewportPx.toDp() })
-                    .padding(start = textStart),
-                contentAlignment = Alignment.CenterStart,
-            ) {
-                BasicText(
-                    "Something to say?",
-                    style = hintStyle,
-                    overflow = TextOverflow.Ellipsis,
-                    softWrap = false,
-                    maxLines = 1,
-                )
+                Spacer(Modifier.height(bottomPad))
             }
         }
         Box(
             Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = toolbar)
-                .fillMaxWidth()
-                .height(1.dp)
-                .background(line),
-        )
-        Row(
-            Modifier
-                .align(Alignment.BottomCenter)
-                .fillMaxWidth()
-                .height(toolbar)
-                .padding(horizontal = side),
-            verticalAlignment = Alignment.CenterVertically,
+                .align(Alignment.BottomStart)
+                .padding(start = side, bottom = (toolbar - AttachButton) / 2),
         ) {
             ComposerHit(onClick = {}, alignment = Alignment.CenterStart) {
                 PaperclipIcon(tint = chrome, size = glyph)
             }
-            Spacer(Modifier.weight(1f))
-            ComposerHit(
-                onClick = save,
-                description = if (arrow) "Save" else null,
-                alignment = Alignment.CenterEnd,
-            ) {
-                ArrowUpIcon(tint = chrome, size = glyph)
-            }
         }
+        Box(
+            Modifier
+                .align(Alignment.BottomEnd)
+                .padding(end = chromeInsets.circleEnd, bottom = (toolbar - AttachButton) / 2)
+                .size(AttachButton)
+                .then(if (canSave) Modifier.background(chrome, CircleShape) else Modifier)
+                .then(if (arrow) Modifier.semantics { contentDescription = "Save" } else Modifier)
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                    onClick = save,
+                ),
+            contentAlignment = Alignment.Center,
+        ) {
+            ArrowUpIcon(tint = if (canSave) bar else chrome, size = glyph)
+        }
+        Box(
+            Modifier
+                .align(Alignment.TopCenter)
+                .fillMaxWidth()
+                .height(1.dp)
+                .background(Color(0xFF9E9E9E)),
+        )
     }
+}
+
+internal data class ComposerChrome(val textStart: Dp, val textEnd: Dp, val circleEnd: Dp)
+
+internal fun composerChrome(side: Dp, glyph: Dp, circle: Dp): ComposerChrome {
+    val circleEnd = side - (circle - glyph) / 2
+    val inset = circleEnd + circle + 3.dp
+    return ComposerChrome(inset, inset, circleEnd)
 }
 
 private val AttachButton = 40.dp
@@ -386,14 +372,12 @@ private val AttachButton = 40.dp
 @Composable
 private fun ComposerHit(
     onClick: () -> Unit,
-    description: String? = null,
     alignment: Alignment = Alignment.Center,
     icon: @Composable () -> Unit,
 ) {
     Box(
         Modifier
             .size(AttachButton)
-            .then(if (description != null) Modifier.semantics { contentDescription = description } else Modifier)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,

@@ -12,9 +12,9 @@
     "semantic_hash": "d98bb372806e53390471aedc7e8c8d58"
   },
   "app/src/main/java/com/linote/Composer.kt": {
-    "mtime": 1791732289.0064592,
-    "seen": 1791732558.9709783,
-    "ast_hash": "e1a518eb09e54ba2a214a4fb51bb5403",
+    "mtime": 1791738689.9230251,
+    "seen": 1791738711.800311,
+    "ast_hash": "1c257fd429769e66c9f0f46cd6f425d4",
     "semantic_hash": ""
   },
   "app/src/main/java/com/linote/DocumentBody.kt": {
@@ -231,6 +231,12 @@
     "mtime": 1791733965.927467,
     "seen": 1791734371.6378324,
     "ast_hash": "0b426cdf683bbb4fbd8b53f9c61c4d96",
+    "semantic_hash": ""
+  },
+  "app/src/test/java/com/linote/ComposerChromeTest.kt": {
+    "mtime": 1791738482.1705308,
+    "seen": 1791738711.800323,
+    "ast_hash": "fff50a9d723e092bdbc2b4b0fa640605",
     "semantic_hash": ""
   }
 }
