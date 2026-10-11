@@ -151,6 +151,7 @@ fun Composer(
     }
     val toolbar = 52.dp
     val textPad = 18.dp
+    val oldestPad = 4.dp
     val toolbarPx = with(density) { toolbar.toPx() }
     val maxHeightPx = toolbarPx + with(density) { (textPad * 2).toPx() } + lineHeightPx * 5f
     val naturalPx = toolbarPx + (laid.height - lineHeightPx).coerceAtLeast(0f)
@@ -170,7 +171,8 @@ fun Composer(
     var xGoal by remember { mutableFloatStateOf(0f) }
     val overflows = naturalPx > maxHeightPx + 1f
     val bottomPadPx = ((toolbarPx - lineHeightPx) / 2f).coerceAtLeast(0f)
-    val bodyTop = if (overflows) 0f else (composerHeightPx - bottomPadPx - laid.height).coerceAtLeast(0f)
+    val oldestPadPx = if (overflows) with(density) { oldestPad.toPx() } else 0f
+    val bodyTop = if (overflows) oldestPadPx else (composerHeightPx - bottomPadPx - laid.height).coerceAtLeast(0f)
     LaunchedEffect(composerHeight, bottomInset) { onHeight(composerHeight + bottomInset + floatGap) }
     LaunchedEffect(focused) {
         if (focused) focusRequester.requestFocus() else focusManager.clearFocus()
@@ -186,8 +188,8 @@ fun Composer(
         }
         val (_, caretY) = caretPosition(laid, editor.caret, charWidth)
         val desired = composerHeightPx - bottomPadPx - lineHeightPx
-        val maxScroll = (laid.height + bottomPadPx - composerHeightPx).coerceAtLeast(0f)
-        scroll.scrollTo((caretY - desired).coerceIn(0f, maxScroll).toInt())
+        val maxScroll = (oldestPadPx + laid.height + bottomPadPx - composerHeightPx).coerceAtLeast(0f)
+        scroll.scrollTo((caretY + oldestPadPx - desired).coerceIn(0f, maxScroll).toInt())
     }
 
     fun focusNow() {
@@ -306,6 +308,7 @@ fun Composer(
         val save = { if (canSave) onSave() }
         if (overflows) {
             Column(fieldModifier) {
+                Spacer(Modifier.height(oldestPad))
                 DocumentBody(
                     editor, laid, charWidth, lineHeightPx, ink, inkDim,
                     textMeasurer, bodyStyle, hintStyle, nameStyle, true,
